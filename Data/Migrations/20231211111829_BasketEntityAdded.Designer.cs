@@ -10,7 +10,7 @@ using ShopBackEnd.Data;
 namespace ShopBackEnd.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20231211040333_BasketEntityAdded")]
+    [Migration("20231211111829_BasketEntityAdded")]
     partial class BasketEntityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
