@@ -1,11 +1,29 @@
-﻿using ShopBackEnd.Entities;
+﻿using Microsoft.AspNetCore.Identity;
+using ShopBackEnd.Entities;
 
 namespace ShopBackEnd.Data
 {
-    public class DbInitializer
+    public static class DbInitializer
     {
-        public static void Initialize(StoreContext context)
+        public static async Task Initialize(StoreContext context,UserManager<User>userManager)
         {
+            if (!userManager.Users.Any())
+            {
+                var user = new User
+                {
+                    UserName = "bob",
+                    Email = "bob@test.com"
+                };
+                await userManager.CreateAsync(user,"Pa$$w0rd");
+                await userManager.AddToRoleAsync(user,"Member");
+                var admin = new User
+                {
+                    UserName = "admin",
+                    Email = "admin@test.com"
+                };
+                await userManager.CreateAsync(admin, "Pa$$w0rd");
+                await userManager.AddToRolesAsync(admin, new[] {"Member", "Admin" });
+            }
             if (context.Products.Any()) return;
             var products = new List<Product>
             {
@@ -18,7 +36,7 @@ namespace ShopBackEnd.Data
         PictureUrl = "https://example.com/iphone13.jpg",
         Type = "Điện thoại di động",
         Brand = "Apple",
-        QuantityInStock = "30"
+         Quantity = 30,
     },
     new Product
     {
@@ -29,7 +47,7 @@ namespace ShopBackEnd.Data
         PictureUrl = "https://example.com/spectrex360.jpg",
         Type = "Laptop",
         Brand = "HP",
-        QuantityInStock = "15"
+        Quantity = 15,
     },
     new Product
     {
@@ -40,7 +58,7 @@ namespace ShopBackEnd.Data
         PictureUrl = "https://example.com/sonywh1000xm4.jpg",
         Type = "Tai nghe",
         Brand = "Sony",
-        QuantityInStock = "25"
+      Quantity = 25,
     },
     new Product
     {
@@ -51,7 +69,7 @@ namespace ShopBackEnd.Data
         PictureUrl = "https://example.com/galaxywatch4.jpg",
         Type = "Đồng hồ thông minh",
         Brand = "Samsung",
-        QuantityInStock = "20"
+       Quantity = 25,
     },
     new Product
     {
@@ -62,7 +80,7 @@ namespace ShopBackEnd.Data
         PictureUrl = "https://example.com/canoneosr5.jpg",
         Type = "Máy ảnh",
         Brand = "Canon",
-        QuantityInStock = "10"
+       Quantity = 25,
     }
             };
             foreach (var product in products)

@@ -10,7 +10,7 @@ using ShopBackEnd.Data;
 namespace ShopBackEnd.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20231211040243_InitialCreate")]
+    [Migration("20231215073937_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -82,9 +82,8 @@ namespace ShopBackEnd.Data.Migrations
                     b.Property<long>("Price")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("QuantityInStock")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Type")
                         .IsRequired()
