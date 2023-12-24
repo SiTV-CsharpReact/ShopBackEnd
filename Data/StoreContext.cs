@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ShopBackEnd.Entities;
-using System.Collections.Generic;
 
 namespace ShopBackEnd.Data
 {
