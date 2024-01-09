@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShopBackEnd.Data;
 
@@ -10,9 +11,10 @@ using ShopBackEnd.Data;
 namespace ShopBackEnd.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    partial class StoreContextModelSnapshot : ModelSnapshot
+    [Migration("20240109014511_OrderEntityAdded")]
+    partial class OrderEntityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.25");
@@ -39,14 +41,14 @@ namespace ShopBackEnd.Data.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "7b407f44-835f-4852-90f8-15db576daedf",
+                            ConcurrencyStamp = "e3e96a89-22a5-4981-afa8-5b75560499f7",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "a7e20e56-9116-4320-b928-9bb4476da9a8",
+                            ConcurrencyStamp = "a69859a7-7447-4299-8e56-fa6b57a2d50c",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

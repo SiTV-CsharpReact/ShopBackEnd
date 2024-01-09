@@ -4,7 +4,7 @@ using ShopBackEnd.Data;
 
 namespace ShopBackEnd.Entities
 {
-    public class User:IdentityUser<int>
+    public class User:IdentityUser<string>
     {
        public UserAddress Address{get;set;}
     }

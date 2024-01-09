@@ -6,6 +6,8 @@ using ShopBackEnd.Entities;
 
 namespace ShopBackEnd.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;

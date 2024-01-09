@@ -5,7 +5,7 @@ using ShopBackEnd.Entities;
 
 namespace ShopBackEnd.Data
 {
-    public class StoreContext : IdentityDbContext<User, Role, int>
+    public class StoreContext : IdentityDbContext<User, Role, string>
     {
         public StoreContext(DbContextOptions options) : base(options)
         {
@@ -20,8 +20,8 @@ namespace ShopBackEnd.Data
             builder.Entity<User>().HasOne(a => a.Address).WithOne().HasForeignKey<UserAddress>(a => a.Id).OnDelete(DeleteBehavior.Cascade);
             builder.Entity<IdentityRole>()
                 .HasData(
-                new Role {Id = 1, Name = "Member", NormalizedName = "MEMBER" },
-                new Role {Id = 2, Name = "Admin", NormalizedName = "ADMIN" }
+                new Role {Id = "1", Name = "Member", NormalizedName = "MEMBER" },
+                new Role {Id = "2", Name = "Admin", NormalizedName = "ADMIN" }
                );
         }
     }
