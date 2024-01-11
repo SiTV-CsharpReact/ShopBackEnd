@@ -20,7 +20,7 @@ namespace ShopBackEnd.Controllers
            _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetProducts([FromQuery]ProductParams productParams)
+        public async Task<ActionResult<PagedList<Product>>> GetProducts([FromQuery]ProductParams productParams)
         {
             var query = _context.Products
                 .Sort(productParams.OrderBy)

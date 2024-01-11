@@ -32,7 +32,7 @@ namespace ShopBackEnd.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(RegisterDto registerDto)
         {
-            var user = new User { UserName = registerDto.Username, Email = registerDto.Email };
+            var user = new User { Id = Guid.NewGuid().ToString(), UserName = registerDto.Username, Email = registerDto.Email };
             var result = await _userManager.CreateAsync(user,registerDto.Password);
             if (!result.Succeeded)
             {

@@ -29,61 +29,202 @@ namespace ShopBackEnd.Data
             if (context.Products.Any()) return;
             var products = new List<Product>
             {
-               new Product
-    {
-        Id = 1,
-        Name = "Điện thoại iPhone 13",
-        Description = "Sản phẩm điện thoại mới nhất của Apple",
-        Price = 25000000,
-        PictureUrl = "https://example.com/iphone13.jpg",
-        Type = "Điện thoại di động",
-        Brand = "Apple",
-         Quantity = 30,
-    },
-    new Product
-    {
-        Id = 2,
-        Name = "Laptop Spectre x360",
-        Description = "Laptop 2 trong 1 với màn hình cảm ứng",
-        Price = 30000000,
-        PictureUrl = "https://example.com/spectrex360.jpg",
-        Type = "Laptop",
-        Brand = "HP",
-        Quantity = 15,
-    },
-    new Product
-    {
-        Id = 3,
-        Name = "Tai nghe Sony WH-1000XM4",
-        Description = "Tai nghe chống ồn cao cấp",
-        Price = 5000000,
-        PictureUrl = "https://example.com/sonywh1000xm4.jpg",
-        Type = "Tai nghe",
-        Brand = "Sony",
-      Quantity = 25,
-    },
-    new Product
-    {
-        Id = 4,
-        Name = "Smartwatch Galaxy Watch 4",
-        Description = "Đồng hồ thông minh của Samsung",
-        Price = 7000000,
-        PictureUrl = "https://example.com/galaxywatch4.jpg",
-        Type = "Đồng hồ thông minh",
-        Brand = "Samsung",
-       Quantity = 25,
-    },
-    new Product
-    {
-        Id = 5,
-        Name = "Máy ảnh Canon EOS R5",
-        Description = "Máy ảnh mirrorless chuyên nghiệp",
-        Price = 35000000,
-        PictureUrl = "https://example.com/canoneosr5.jpg",
-        Type = "Máy ảnh",
-        Brand = "Canon",
-       Quantity = 25,
-    }
+       new Product
+                {
+                    Name = "Angular Speedster Board 2000",
+                    Description =
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 20000,
+                    PictureUrl = "/images/products/sb-ang1.png",
+                    Brand = "Angular",
+                    Type = "Boards",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Green Angular Board 3000",
+                    Description = "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+                    Price = 15000,
+                    PictureUrl = "/images/products/sb-ang2.png",
+                    Brand = "Angular",
+                    Type = "Boards",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Core Board Speed Rush 3",
+                    Description =
+                        "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+                    Price = 18000,
+                    PictureUrl = "/images/products/sb-core1.png",
+                    Brand = "NetCore",
+                    Type = "Boards",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Net Core Super Board",
+                    Description =
+                        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+                    Price = 30000,
+                    PictureUrl = "/images/products/sb-core2.png",
+                    Brand = "NetCore",
+                    Type = "Boards",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "React Board Super Whizzy Fast",
+                    Description =
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 25000,
+                    PictureUrl = "/images/products/sb-react1.png",
+                    Brand = "React",
+                    Type = "Boards",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Typescript Entry Board",
+                    Description =
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 12000,
+                    PictureUrl = "/images/products/sb-ts1.png",
+                    Brand = "TypeScript",
+                    Type = "Boards",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Core Blue Hat",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1000,
+                    PictureUrl = "/images/products/hat-core1.png",
+                    Brand = "NetCore",
+                    Type = "Hats",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Green React Woolen Hat",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 8000,
+                    PictureUrl = "/images/products/hat-react1.png",
+                    Brand = "React",
+                    Type = "Hats",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Purple React Woolen Hat",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1500,
+                    PictureUrl = "/images/products/hat-react2.png",
+                    Brand = "React",
+                    Type = "Hats",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Blue Code Gloves",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1800,
+                    PictureUrl = "/images/products/glove-code1.png",
+                    Brand = "VS Code",
+                    Type = "Gloves",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Green Code Gloves",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1500,
+                    PictureUrl = "/images/products/glove-code2.png",
+                    Brand = "VS Code",
+                    Type = "Gloves",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Purple React Gloves",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1600,
+                    PictureUrl = "/images/products/glove-react1.png",
+                    Brand = "React",
+                    Type = "Gloves",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Green React Gloves",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1400,
+                    PictureUrl = "/images/products/glove-react2.png",
+                    Brand = "React",
+                    Type = "Gloves",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Redis Red Boots",
+                    Description =
+                        "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+                    Price = 25000,
+                    PictureUrl = "/images/products/boot-redis1.png",
+                    Brand = "Redis",
+                    Type = "Boots",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Core Red Boots",
+                    Description =
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 18999,
+                    PictureUrl = "/images/products/boot-core2.png",
+                    Brand = "Redis",
+                    Type = "Boots",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Core Purple Boots",
+                    Description =
+                        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+                    Price = 19999,
+                    PictureUrl = "/images/products/boot-core1.png",
+                    Brand = "NetCore",
+                    Type = "Boots",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Angular Purple Boots",
+                    Description = "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+                    Price = 15000,
+                    PictureUrl = "/images/products/boot-ang2.png",
+                    Brand = "Angular",
+                    Type = "Boots",
+                    Quantity = 100
+                },
+                new Product
+                {
+                    Name = "Angular Blue Boots",
+                    Description =
+                        "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+                    Price = 18000,
+                    PictureUrl = "/images/products/boot-ang1.png",
+                    Brand = "Angular",
+                    Type = "Boots",
+                    Quantity = 100
+                },
             };
             foreach (var product in products)
             {
